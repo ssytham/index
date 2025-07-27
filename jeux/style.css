@@ -1,0 +1,106 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Cinzel', serif;
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  background-image: url('511c74b0-7812-4654-a748-5f56319aba1a.png');
+  background-size: cover;
+  background-position: center;
+  
+  padding-top: 10px;     /* espace en haut */
+  padding-bottom: 380px;  /* espace en bas */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* darkens the image */
+  backdrop-filter: blur(2px);
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(90deg, #ff003c, #ff6b81);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px #ff003c88;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-top: 0.5rem;
+}
+
+.btn-neon {
+  background: transparent;
+  border: 2px solid #ff0044;
+  color: #ff0044;
+  font-weight: bold;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.btn-neon:hover {
+  background: #ff0044;
+  color: #fff;
+  box-shadow: 0 0 15px #ff0044, 0 0 30px #ff0044;
+}
+
+.fixed-signature {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  z-index: 100;
+  opacity: 0.6;
+}
+
+.fixed-signature a {
+  color: #999;
+  text-decoration: none;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.fixed-signature a:hover {
+  color: #ccc;
+  opacity: 1;
+}
+
+@keyframes spinZ {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.logo-spin {
+  animation: spinZ 3s linear infinite;
+}
